@@ -19,7 +19,7 @@ public class QuickSort {
 		}
 		t.swap(arr, pivot, r);
 		
-		sort(arr, pivot, r-1);
+		sort(arr, pivot, r);
 		sort(arr, r+1, last);
 	
 	}

@@ -5,8 +5,10 @@ import java.util.*;
 public class Main {
 
 	public static void main(String[] args) {
+		
+		Scanner sc = new Scanner(System.in);
 		/* create random int array */
-		int n = 10;
+		int n = 100;
 		
 		ArrayList<Integer> arr = new ArrayList<Integer>();
 
@@ -17,8 +19,7 @@ public class Main {
 		Integer[] testArr = arr.stream().toArray(m -> new Integer[m]);
 
 		/* sorting */
-		while(true) {
-			Scanner sc = new Scanner(System.in);
+		while(true) {			
 			System.out.println("Select sorting algorithm");
 			System.out.println("* s: selection sort / q: quick sort");
 			String s = sc.next();
