@@ -73,7 +73,7 @@ public class Main {
 				case 'm':
 					MergeSort ms = new MergeSort();
 					startTime = System.currentTimeMillis();
-					ms.sort(testArr, 0, testArr.length-1);
+					testArr = ms.sort(testArr, 0, testArr.length-1);
 					endTime = System.currentTimeMillis();
 					System.out.println("Merge sort(recursive)");
 					break;
