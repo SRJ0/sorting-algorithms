@@ -43,7 +43,7 @@ public class Main {
 		/* sorting */
 		while(true) {			
 			System.out.println("Select sorting algorithm");
-			System.out.println("* s: selection sort / q: quick sort / b: bubble sort / m : merge sort");
+			System.out.println("* s: selection sort / q: quick sort / b: bubble sort / m : merge sort / h : heap sort/ i : insertion sort");
 			String s = sc.next();
 			char selector = s.charAt(0);
 			long startTime=0, endTime=0;
@@ -56,6 +56,7 @@ public class Main {
 					endTime = System.currentTimeMillis();
 					System.out.println("Quick sort");
 					break;
+					
 				case 's':
 					SelectionSort ss = new SelectionSort();
 					startTime = System.currentTimeMillis();
@@ -63,6 +64,7 @@ public class Main {
 					endTime = System.currentTimeMillis();
 					System.out.println("Selection sort");
 					break;
+					
 				case 'b':
 					BubbleSort bs = new BubbleSort();
 					startTime = System.currentTimeMillis();
@@ -70,6 +72,7 @@ public class Main {
 					endTime = System.currentTimeMillis();
 					System.out.println("Bubble sort");
 					break;
+					
 				case 'm':
 					MergeSort ms = new MergeSort();
 					startTime = System.currentTimeMillis();
@@ -78,6 +81,21 @@ public class Main {
 					System.out.println("Merge sort(recursive)");
 					break;
 					
+				case 'h':
+					HeapSort hs = new HeapSort();
+					startTime = System.currentTimeMillis();
+					hs.sort(testArr);
+					endTime = System.currentTimeMillis();
+					System.out.println("Heap sort");
+					break;
+					
+				case 'i':
+					InsertionSort is = new InsertionSort();
+					startTime = System.currentTimeMillis();
+					testArr = is.sort(testArr);
+					endTime = System.currentTimeMillis();
+					System.out.println("Insertion Sort");
+					break;
 			}
 			
 			/* result & initialize */
